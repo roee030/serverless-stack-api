@@ -3,7 +3,7 @@ import dynamoDb from './libs/dynamodb-lib';
 
 export const main = handler(async (event, context) => {
 	const params = {
-		TableName: 'notes',
+		TableName: process.env.tableName,
 		// 'KeyConditionExpression' defines the condition for the query
 		// - 'userId = :userId': only return items with matching 'userId'
 		//   partition key
